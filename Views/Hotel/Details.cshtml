@@ -1,0 +1,31 @@
+@model Hotel
+@{
+    ViewBag.Title = "Hotels";
+    Layout = "_Layout";
+}
+
+<div class="row g-3">
+    <div class="col-md-4">
+        <div class="card-body">
+            <h1 class="card-title">@Model.Name</h1>
+            <p class="card-text"> <strong>Description</strong> 
+                <br/>
+                @Model.Description
+            </p>
+                <span class="card-text"><strong>Location: </strong> </span>
+                <span class="card-text">@Model.Location</span>
+            <p>
+                <span class="card-text"> <strong>Rooms: </strong></span>
+                <span class="card-text">@Model.Rooms</span>
+            </p>
+            <p>
+                <span class="card-text"> <strong>Phone number: </strong></span>
+                <span class="card-text"> @Model.Phone</span>
+            </p>
+        </div>
+    </div>
+    <div class="col-md-4 d-flex align-items-center justify-content-end">
+        <img src="@Model.ImgURL" class="img-fluid rounded-start" alt="@Model.Name">
+    </div>
+</div>
+

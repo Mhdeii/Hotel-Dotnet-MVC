@@ -1,0 +1,49 @@
+@model Hotel
+@{
+    ViewBag.Title = "Hotels";
+    Layout = "_Layout";
+}
+<form method="post" asp-action="Add" asp-controller="Hotel" enctype="multipart/form-data">
+<div class="row g-2">
+   
+    <div class="col-md">
+        <label asp-for="Name" class="form-label">Name</label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+<div class="col-md">
+            <label asp-for="Location" class="form-label">Location</label>
+            <input asp-for="Location" class="form-control" />
+        </div>
+    </div>
+    <div class="row g-2">
+    <div class="col-md">
+        <label asp-for="Rooms" class="form-label">Room</label>
+        <input asp-for="Rooms" class="form-control" />
+    </div>
+    <div class="col-md">
+        <label asp-for="Phone" class="form-label">Phone number</label>
+        <input asp-for="Phone" class="form-control" />
+    </div>
+      <div class="col-md">
+            <label asp-for="Rating" class="form-label">Rating</label>
+            <select asp-for="Rating" class="form-select" aria-label="Rating">
+                <option selected>Open this select menu</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label asp-for="ImgURL" class="form-label">ImageUrl</label>
+        <input asp-for="ImgURL" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Description" class="form-label">Description</label>
+        <textarea asp-for="Description" class="form-control" rows="3"></textarea>
+    </div>
+<button type="submit" class="btn btn-success">Add </button>
+
+</form>
